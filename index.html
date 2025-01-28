@@ -15,9 +15,12 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
+  <link rel="stylesheet" href="./Manaflow BI_files/de0ae4a3b953b4d7.css" data-precedence="next">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -39,7 +42,8 @@
 <body class="index-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    <div
+      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
@@ -97,7 +101,7 @@
               </div> -->
 
               <h1 class="mb-4">
-                Validaze is your go-to  <br>
+                Validaze is your go-to <br>
                 AI Data Analyst <br>
                 <!-- <span class="accent-text">Vestibulum Ante</span> -->
               </h1>
@@ -138,70 +142,300 @@
             </div>
           </div>
         </div>
-        <div class="container section-title">
-          <h2></h2>
-          <iframe 
-  width="560" 
-  height="315" 
-  src="https://www.youtube.com/embed/LXb3EKWsInQ?autoplay=1&mute=1&controls=0&modestbranding=1&showinfo=0&rel=0" 
-  frameborder="0" 
-  allow="autoplay; encrypted-media" 
-  allowfullscreen>
-</iframe>
-          <!-- <p>Convert data into clear visuals, extract valuable insights, schedule automated reports, and integrate effortlessly with multiple systems.</p> -->
-        </div><!-- End Section Title -->
-
         <div class="container section-title" data-aos="fade-up">
-          <h2>Built for</h2>
+          <!-- <p>Convert data into clear visuals, extract valuable insights, schedule automated reports, and integrate effortlessly with multiple systems.</p> -->
+        </div><!-- End Section Title -->
+        <style>
+          .textbox-container {
+            position: relative;
+
+          }
+
+          textarea {
+            background: transparent;
+            font-size: 18px;
+            padding: 10px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #e8e8e8;
+            /* Border color updated to #e8e8e8 */
+            outline: none;
+            border-radius: 5px;
+            text-align: left;
+            vertical-align: top;
+            resize: none;
+            /* Disable resizing */
+          }
+
+          .send-btn {
+            position: absolute;
+            right: 10px;
+            /* Align to the right */
+            bottom: 10px;
+            /* Align to the bottom */
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+          }
+
+          .send-btn img {
+            width: 30px;
+            /* Adjust the size of the send icon */
+            height: auto;
+          }
+
+          .database-btn {
+            position: absolute;
+            left: 10px;
+            /* Align to the left */
+            bottom: 10px;
+            /* Align to the bottom */
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 8px 15px;
+            border-radius: 5px;
+          }
+
+          .database-btn:hover {
+            background-color: #45a049;
+          }
+
+          button {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: 1px solid #e8e8e8;
+            /* Border color updated to #e8e8e8 */
+            background-color: white;
+            cursor: pointer;
+            border-radius: 5px;
+          }
+
+          /* Center trigger buttons */
+          .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            /* Space between buttons */
+            margin-top: 20px;
+          }
+        </style>
+        <div class="col-12">
+          <textarea id="autoTextBox" readonly class="form-control" name="message" rows="6" placeholder="Message"
+            required=""></textarea>
+          <button id="databaseButton">+ Database</button>
+          <button id="sendButton">
+            ><!-- <img src="https://static-00.iconduck.com/assets.00/send-icon-512x466-b67uw2ug.png" alt="Send"> -->
+          </button>
+          <!-- + Database Button positioned at the bottom-left -->
+          
+        </div>
+        <!-- Centered Trigger Buttons -->
+        <div class="button-container">
+          <button class="btn btn-link" id="lineChartBtn">+ Line Chart</button>
+          <button class="btn btn-link" id="barChartBtn">+ Bar Chart</button>
+          <button class="btn btn-link" id="pieChartBtn">+ Pie Chart</button>
+          <button class="btn btn-link" id="kpiTrackerBtn">+ KPI Tracker</button>
+          <button class="btn btn-link" id="scatterPlotBtn">+ Scatter Plot</button>
+        </div>
+        <div class="container section-title" data-aos="fade-up">
           <!-- <p>Convert data into clear visuals, extract valuable insights, schedule automated reports, and integrate effortlessly with multiple systems.</p> -->
         </div><!-- End Section Title -->
 
-        <div class="row stats-row gy-4 mt-5" data-aos="fade-up" data-aos-delay="500">
-          <div class="col-lg-3 col-md-6">
-            <div class="stat-item">
-              <div class="stat-icon">
-                <i class="bi bi-activity"></i>
-              </div>
-              <div class="stat-content">
-                <h4>Business Analyst</h4>
-                <p class="mb-0">Vestibulum ante ipsum</p>
-              </div>
+        <script>
+          const typingSpeed = 50; // Speed of typing (ms)
+          const erasingSpeed = 30; // Speed of erasing (ms)
+          const waitTime = 2000; // Wait time before erasing (2 seconds)
+          let index = 0;
+          let currentText = "Ask Validaze to build a line chart showing revenue trends in your dashboard...";
+          let isTyping = false;
+          let timeoutId; // To track setTimeout calls
+          let userTyping = false; // Flag to check if user is typing
+
+          const textarea = document.getElementById("autoTextBox");
+
+          function typeEffect() {
+            clearTimeout(timeoutId);
+            isTyping = true;
+            index = 0;
+            textarea.value = "";
+            textarea.readOnly = false; // Make textarea editable when typing starts
+
+            function type() {
+              if (index < currentText.length) {
+                if (userTyping) return; // Stop typing if the user starts typing
+                textarea.value += currentText.charAt(index);
+                index++;
+                timeoutId = setTimeout(type, typingSpeed);
+              } else {
+                timeoutId = setTimeout(eraseEffect, waitTime);
+              }
+            }
+            type();
+          }
+
+          function eraseEffect() {
+            let eraseIndex = currentText.length;
+
+            function erase() {
+              if (eraseIndex > 0) {
+                textarea.value = currentText.substring(0, eraseIndex - 1);
+                eraseIndex--;
+                timeoutId = setTimeout(erase, erasingSpeed);
+              } else {
+                isTyping = false;
+                textarea.readOnly = true; // Make textarea read-only after typing is done
+                timeoutId = setTimeout(typeEffect, typingSpeed);
+              }
+            }
+            erase();
+          }
+
+          // Detect user typing in the textarea and stop the auto-typing
+          textarea.addEventListener("input", function () {
+            userTyping = true;
+            clearTimeout(timeoutId);
+            isTyping = false;
+          });
+
+          // Resume auto-typing when the textarea is empty
+          function resumeTyping() {
+            if (textarea.value === "") {
+              userTyping = false;
+              typeEffect();
+            }
+          }
+
+          // Stop auto-typing when the user clicks on the textarea
+          textarea.addEventListener("focus", function () {
+            userTyping = true;
+            clearTimeout(timeoutId);
+            isTyping = false;
+          });
+
+          document.getElementById("lineChartBtn").addEventListener("click", function () {
+            clearTimeout(timeoutId);
+            isTyping = false;
+            currentText = "Ask Validaze to build a line chart showing revenue trends in your dashboard...";
+            textarea.value = currentText; // Instantly update text
+            textarea.readOnly = true; // Make textarea read-only
+            resumeTyping();
+          });
+
+          document.getElementById("barChartBtn").addEventListener("click", function () {
+            clearTimeout(timeoutId);
+            isTyping = false;
+            currentText = "Ask Validaze to build a bar chart comparing sales performance across regions...";
+            textarea.value = currentText; // Instantly update text
+            textarea.readOnly = true; // Make textarea read-only
+            resumeTyping();
+          });
+
+          // New Pie Chart Button Action
+          document.getElementById("pieChartBtn").addEventListener("click", function () {
+            clearTimeout(timeoutId);
+            isTyping = false;
+            currentText = "Ask Validaze to build a pie chart displaying the market share of different products...";
+            textarea.value = currentText; // Instantly update text
+            textarea.readOnly = true; // Make textarea read-only
+            resumeTyping();
+          });
+
+          // New KPI Tracker Button Action
+          document.getElementById("kpiTrackerBtn").addEventListener("click", function () {
+            clearTimeout(timeoutId);
+            isTyping = false;
+            currentText = "Ask Validaze to build a KPI tracker to monitor key performance indicators across departments...";
+            textarea.value = currentText; // Instantly update text
+            textarea.readOnly = true; // Make textarea read-only
+            resumeTyping();
+          });
+
+          // New Scatter Plot Button Action
+          document.getElementById("scatterPlotBtn").addEventListener("click", function () {
+            clearTimeout(timeoutId);
+            isTyping = false;
+            currentText = "Ask Validaze to build a scatter plot showing the correlation between sales and marketing efforts...";
+            textarea.value = currentText; // Instantly update text
+            textarea.readOnly = true; // Make textarea read-only
+            resumeTyping();
+          });
+
+          // Send Button Action
+          document.getElementById("sendButton").addEventListener("click", function () {
+            alert("Message Sent: " + textarea.value);
+            // Optionally, clear the text box after sending
+            textarea.value = "";
+            resumeTyping();
+          });
+
+          // + Database Button Action
+          document.getElementById("databaseButton").addEventListener("click", function () {
+            alert("Database option selected!");
+            // Additional action for database button can be added here
+          });
+
+          // Start auto-typing effect on page load
+          window.onload = typeEffect;
+
+        </script>
+        <!-- <p>Convert data into clear visuals, extract valuable insights, schedule automated reports, and integrate effortlessly with multiple systems.</p> -->
+      </div><!-- End Section Title -->
+
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Built for</h2>
+        <!-- <p>Convert data into clear visuals, extract valuable insights, schedule automated reports, and integrate effortlessly with multiple systems.</p> -->
+      </div><!-- End Section Title -->
+
+      <div class="row stats-row gy-4 mt-5" data-aos="fade-up" data-aos-delay="500">
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-item">
+            <div class="stat-icon">
+              <i class="bi bi-activity"></i>
             </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="stat-item">
-              <div class="stat-icon">
-                <i class="bi bi-briefcase"></i>
-              </div>
-              <div class="stat-content">
-                <h4>Business Owner</h4>
-                <p class="mb-0">Nullam quis ante</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="stat-item">
-              <div class="stat-icon">
-                <i class="bi bi-graph-up"></i>
-              </div>
-              <div class="stat-content">
-                <h4>Business Consultant</h4>
-                <p class="mb-0">Etiam sit amet orci</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="stat-item">
-              <div class="stat-icon">
-                <i class="bi bi-briefcase"></i>
-              </div>
-              <div class="stat-content">
-                <h4>Data Analyst</h4>
-                <p class="mb-0">Vestibulum ante ipsum</p>
-              </div>
+            <div class="stat-content">
+              <h4>Business Analyst</h4>
+              <p class="mb-0">Vestibulum ante ipsum</p>
             </div>
           </div>
         </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-item">
+            <div class="stat-icon">
+              <i class="bi bi-briefcase"></i>
+            </div>
+            <div class="stat-content">
+              <h4>Business Owner</h4>
+              <p class="mb-0">Nullam quis ante</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-item">
+            <div class="stat-icon">
+              <i class="bi bi-graph-up"></i>
+            </div>
+            <div class="stat-content">
+              <h4>Business Consultant</h4>
+              <p class="mb-0">Etiam sit amet orci</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-item">
+            <div class="stat-icon">
+              <i class="bi bi-briefcase"></i>
+            </div>
+            <div class="stat-content">
+              <h4>Data Analyst</h4>
+              <p class="mb-0">Vestibulum ante ipsum</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       </div>
 
@@ -217,7 +451,8 @@
           <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
             <!-- <span class="about-meta">How it works</span> -->
             <h2 class="about-title">How it works</h2>
-            <p class="about-description">Provide your data, let the system process it, and receive valuable information for better decision-making.</p>
+            <p class="about-description">Provide your data, let the system process it, and receive valuable information
+              for better decision-making.</p>
 
             <div class="row feature-list-wrapper">
               <div class="col-md-6">
@@ -292,7 +527,8 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Key Features</h2>
-        <p>Convert data into clear visuals, extract valuable insights, schedule automated reports, and integrate effortlessly with multiple systems.</p>
+        <p>Convert data into clear visuals, extract valuable insights, schedule automated reports, and integrate
+          effortlessly with multiple systems.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -337,13 +573,18 @@
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
                 <!-- <h3>Voluptatem dignissimos provident</h3> -->
                 <p class="fst-italic">
-                  Convert data into clear visuals, extract valuable insights, schedule automated reports, and integrate effortlessly with multiple systems.
+                  Convert data into clear visuals, extract valuable insights, schedule automated reports, and integrate
+                  effortlessly with multiple systems.
                 </p>
                 <ul>
-                  <li><i class="bi bi-check2-all"></i> <span>Transform complex data into clear and interactive visuals for better understanding.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Uncover meaningful narratives from data to support strategic decisions.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Generate and deliver reports automatically at set intervals.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Connect with multiple platforms and data sources for a unified workflow.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Transform complex data into clear and interactive visuals
+                      for better understanding.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Uncover meaningful narratives from data to support
+                      strategic decisions.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Generate and deliver reports automatically at set
+                      intervals.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Connect with multiple platforms and data sources for a
+                      unified workflow.</span></li>
                 </ul>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
@@ -357,13 +598,18 @@
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
                 <!-- <h3>Voluptatem dignissimos provident</h3> -->
                 <p class="fst-italic">
-                  Convert data into clear visuals, extract valuable insights, schedule automated reports, and integrate effortlessly with multiple systems.
+                  Convert data into clear visuals, extract valuable insights, schedule automated reports, and integrate
+                  effortlessly with multiple systems.
                 </p>
                 <ul>
-                  <li><i class="bi bi-check2-all"></i> <span>Transform complex data into clear and interactive visuals for better understanding.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Uncover meaningful narratives from data to support strategic decisions.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Generate and deliver reports automatically at set intervals.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Connect with multiple platforms and data sources for a unified workflow.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Transform complex data into clear and interactive visuals
+                      for better understanding.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Uncover meaningful narratives from data to support
+                      strategic decisions.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Generate and deliver reports automatically at set
+                      intervals.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Connect with multiple platforms and data sources for a
+                      unified workflow.</span></li>
                 </ul>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
@@ -377,13 +623,18 @@
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
                 <!-- <h3>Voluptatem dignissimos provident</h3> -->
                 <p class="fst-italic">
-                  Convert data into clear visuals, extract valuable insights, schedule automated reports, and integrate effortlessly with multiple systems.
+                  Convert data into clear visuals, extract valuable insights, schedule automated reports, and integrate
+                  effortlessly with multiple systems.
                 </p>
                 <ul>
-                  <li><i class="bi bi-check2-all"></i> <span>Transform complex data into clear and interactive visuals for better understanding.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Uncover meaningful narratives from data to support strategic decisions.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Generate and deliver reports automatically at set intervals.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Connect with multiple platforms and data sources for a unified workflow.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Transform complex data into clear and interactive visuals
+                      for better understanding.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Uncover meaningful narratives from data to support
+                      strategic decisions.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Generate and deliver reports automatically at set
+                      intervals.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Connect with multiple platforms and data sources for a
+                      unified workflow.</span></li>
                 </ul>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
@@ -421,7 +672,8 @@
             <div class="feature-box blue">
               <i class="bi bi-patch-check"></i>
               <h4>No-coding experienced</h4>
-              <p>A user-friendly platform designed for all skill levels, eliminating the need for technical expertise.</p>
+              <p>A user-friendly platform designed for all skill levels, eliminating the need for technical expertise.
+              </p>
             </div>
           </div><!-- End Feature Borx-->
 
@@ -581,13 +833,17 @@
           <!-- Abstract Background Elements -->
           <div class="shape shape-1">
             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-              <path d="M47.1,-57.1C59.9,-45.6,68.5,-28.9,71.4,-10.9C74.2,7.1,71.3,26.3,61.5,41.1C51.7,55.9,35,66.2,16.9,69.2C-1.3,72.2,-21,67.8,-36.9,57.9C-52.8,48,-64.9,32.6,-69.1,15.1C-73.3,-2.4,-69.5,-22,-59.4,-37.1C-49.3,-52.2,-32.8,-62.9,-15.7,-64.9C1.5,-67,34.3,-68.5,47.1,-57.1Z" transform="translate(100 100)"></path>
+              <path
+                d="M47.1,-57.1C59.9,-45.6,68.5,-28.9,71.4,-10.9C74.2,7.1,71.3,26.3,61.5,41.1C51.7,55.9,35,66.2,16.9,69.2C-1.3,72.2,-21,67.8,-36.9,57.9C-52.8,48,-64.9,32.6,-69.1,15.1C-73.3,-2.4,-69.5,-22,-59.4,-37.1C-49.3,-52.2,-32.8,-62.9,-15.7,-64.9C1.5,-67,34.3,-68.5,47.1,-57.1Z"
+                transform="translate(100 100)"></path>
             </svg>
           </div>
 
           <div class="shape shape-2">
             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-              <path d="M41.3,-49.1C54.4,-39.3,66.6,-27.2,71.1,-12.1C75.6,3,72.4,20.9,63.3,34.4C54.2,47.9,39.2,56.9,23.2,62.3C7.1,67.7,-10,69.4,-24.8,64.1C-39.7,58.8,-52.3,46.5,-60.1,31.5C-67.9,16.4,-70.9,-1.4,-66.3,-16.6C-61.8,-31.8,-49.7,-44.3,-36.3,-54C-22.9,-63.7,-8.2,-70.6,3.6,-75.1C15.4,-79.6,28.2,-58.9,41.3,-49.1Z" transform="translate(100 100)"></path>
+              <path
+                d="M41.3,-49.1C54.4,-39.3,66.6,-27.2,71.1,-12.1C75.6,3,72.4,20.9,63.3,34.4C54.2,47.9,39.2,56.9,23.2,62.3C7.1,67.7,-10,69.4,-24.8,64.1C-39.7,58.8,-52.3,46.5,-60.1,31.5C-67.9,16.4,-70.9,-1.4,-66.3,-16.6C-61.8,-31.8,-49.7,-44.3,-36.3,-54C-22.9,-63.7,-8.2,-70.6,3.6,-75.1C15.4,-79.6,28.2,-58.9,41.3,-49.1Z"
+                transform="translate(100 100)"></path>
             </svg>
           </div>
 
@@ -612,7 +868,9 @@
 
           <div class="shape shape-3">
             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-              <path d="M43.3,-57.1C57.4,-46.5,71.1,-32.6,75.3,-16.2C79.5,0.2,74.2,19.1,65.1,35.3C56,51.5,43.1,65,27.4,71.7C11.7,78.4,-6.8,78.3,-23.9,72.4C-41,66.5,-56.7,54.8,-65.4,39.2C-74.1,23.6,-75.8,4,-71.7,-13.2C-67.6,-30.4,-57.7,-45.2,-44.3,-56.1C-30.9,-67,-15.5,-74,0.7,-74.9C16.8,-75.8,33.7,-70.7,43.3,-57.1Z" transform="translate(100 100)"></path>
+              <path
+                d="M43.3,-57.1C57.4,-46.5,71.1,-32.6,75.3,-16.2C79.5,0.2,74.2,19.1,65.1,35.3C56,51.5,43.1,65,27.4,71.7C11.7,78.4,-6.8,78.3,-23.9,72.4C-41,66.5,-56.7,54.8,-65.4,39.2C-74.1,23.6,-75.8,4,-71.7,-13.2C-67.6,-30.4,-57.7,-45.2,-44.3,-56.1C-30.9,-67,-15.5,-74,0.7,-74.9C16.8,-75.8,33.7,-70.7,43.3,-57.1Z"
+                transform="translate(100 100)"></path>
             </svg>
           </div>
         </div>
@@ -677,7 +935,7 @@
 
     </section><!-- /Clients Section -->
 
-    
+
     </section><!-- /Services Section -->
 
     <!-- Pricing Section -->
@@ -702,7 +960,8 @@
                 <span class="amount">9.9</span>
                 <span class="period">/ month</span>
               </div>
-              <p class="description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam.</p>
+              <p class="description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                doloremque laudantium totam.</p>
 
               <h4>Featured Included:</h4>
               <ul class="features-list">
@@ -737,7 +996,8 @@
                 <span class="amount">19.9</span>
                 <span class="period">/ month</span>
               </div>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</p>
+              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                praesentium voluptatum.</p>
 
               <h4>Featured Included:</h4>
               <ul class="features-list">
@@ -775,7 +1035,8 @@
                 <span class="amount">39.9</span>
                 <span class="period">/ month</span>
               </div>
-              <p class="description">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae.</p>
+              <p class="description">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
+                molestiae.</p>
 
               <h4>Featured Included:</h4>
               <ul class="features-list">
@@ -822,10 +1083,14 @@
 
           <div class="col-lg-5" data-aos="fade-up">
             <h2 class="faq-title">Have a question? Check out the FAQ</h2>
-            <p class="faq-description">Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet adipiscing sem neque sed ipsum.</p>
+            <p class="faq-description">Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet
+              adipiscing sem neque sed ipsum.</p>
             <div class="faq-arrow d-none d-lg-block" data-aos="fade-up" data-aos-delay="200">
-              <svg class="faq-arrow" width="200" height="211" viewBox="0 0 200 211" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M198.804 194.488C189.279 189.596 179.529 185.52 169.407 182.07L169.384 182.049C169.227 181.994 169.07 181.939 168.912 181.884C166.669 181.139 165.906 184.546 167.669 185.615C174.053 189.473 182.761 191.837 189.146 195.695C156.603 195.912 119.781 196.591 91.266 179.049C62.5221 161.368 48.1094 130.695 56.934 98.891C84.5539 98.7247 112.556 84.0176 129.508 62.667C136.396 53.9724 146.193 35.1448 129.773 30.2717C114.292 25.6624 93.7109 41.8875 83.1971 51.3147C70.1109 63.039 59.63 78.433 54.2039 95.0087C52.1221 94.9842 50.0776 94.8683 48.0703 94.6608C30.1803 92.8027 11.2197 83.6338 5.44902 65.1074C-1.88449 41.5699 14.4994 19.0183 27.9202 1.56641C28.6411 0.625793 27.2862 -0.561638 26.5419 0.358501C13.4588 16.4098 -0.221091 34.5242 0.896608 56.5659C1.8218 74.6941 14.221 87.9401 30.4121 94.2058C37.7076 97.0203 45.3454 98.5003 53.0334 98.8449C47.8679 117.532 49.2961 137.487 60.7729 155.283C87.7615 197.081 139.616 201.147 184.786 201.155L174.332 206.827C172.119 208.033 174.345 211.287 176.537 210.105C182.06 207.125 187.582 204.122 193.084 201.144C193.346 201.147 195.161 199.887 195.423 199.868C197.08 198.548 193.084 201.144 195.528 199.81C196.688 199.192 197.846 198.552 199.006 197.935C200.397 197.167 200.007 195.087 198.804 194.488ZM60.8213 88.0427C67.6894 72.648 78.8538 59.1566 92.1207 49.0388C98.8475 43.9065 106.334 39.2953 114.188 36.1439C117.295 34.8947 120.798 33.6609 124.168 33.635C134.365 33.5511 136.354 42.9911 132.638 51.031C120.47 77.4222 86.8639 93.9837 58.0983 94.9666C58.8971 92.6666 59.783 90.3603 60.8213 88.0427Z" fill="currentColor"></path>
+              <svg class="faq-arrow" width="200" height="211" viewBox="0 0 200 211" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M198.804 194.488C189.279 189.596 179.529 185.52 169.407 182.07L169.384 182.049C169.227 181.994 169.07 181.939 168.912 181.884C166.669 181.139 165.906 184.546 167.669 185.615C174.053 189.473 182.761 191.837 189.146 195.695C156.603 195.912 119.781 196.591 91.266 179.049C62.5221 161.368 48.1094 130.695 56.934 98.891C84.5539 98.7247 112.556 84.0176 129.508 62.667C136.396 53.9724 146.193 35.1448 129.773 30.2717C114.292 25.6624 93.7109 41.8875 83.1971 51.3147C70.1109 63.039 59.63 78.433 54.2039 95.0087C52.1221 94.9842 50.0776 94.8683 48.0703 94.6608C30.1803 92.8027 11.2197 83.6338 5.44902 65.1074C-1.88449 41.5699 14.4994 19.0183 27.9202 1.56641C28.6411 0.625793 27.2862 -0.561638 26.5419 0.358501C13.4588 16.4098 -0.221091 34.5242 0.896608 56.5659C1.8218 74.6941 14.221 87.9401 30.4121 94.2058C37.7076 97.0203 45.3454 98.5003 53.0334 98.8449C47.8679 117.532 49.2961 137.487 60.7729 155.283C87.7615 197.081 139.616 201.147 184.786 201.155L174.332 206.827C172.119 208.033 174.345 211.287 176.537 210.105C182.06 207.125 187.582 204.122 193.084 201.144C193.346 201.147 195.161 199.887 195.423 199.868C197.08 198.548 193.084 201.144 195.528 199.81C196.688 199.192 197.846 198.552 199.006 197.935C200.397 197.167 200.007 195.087 198.804 194.488ZM60.8213 88.0427C67.6894 72.648 78.8538 59.1566 92.1207 49.0388C98.8475 43.9065 106.334 39.2953 114.188 36.1439C117.295 34.8947 120.798 33.6609 124.168 33.635C134.365 33.5511 136.354 42.9911 132.638 51.031C120.47 77.4222 86.8639 93.9837 58.0983 94.9666C58.8971 92.6666 59.783 90.3603 60.8213 88.0427Z"
+                  fill="currentColor"></path>
               </svg>
             </div>
           </div>
@@ -836,7 +1101,8 @@
               <div class="faq-item faq-active">
                 <h3>Non consectetur a erat nam at lectus urna duis?</h3>
                 <div class="faq-content">
-                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
+                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur
+                    gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -844,7 +1110,9 @@
               <div class="faq-item">
                 <h3>Feugiat scelerisque varius morbi enim nunc faucibus?</h3>
                 <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet
+                    id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque
+                    elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -852,7 +1120,10 @@
               <div class="faq-item">
                 <h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
                 <div class="faq-content">
-                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
+                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar
+                    elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque
+                    eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis
+                    sed odio morbi quis</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -860,7 +1131,9 @@
               <div class="faq-item">
                 <h3>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h3>
                 <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet
+                    id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque
+                    elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -868,7 +1141,9 @@
               <div class="faq-item">
                 <h3>Tempus quam pellentesque nec nam aliquam sem et tortor?</h3>
                 <div class="faq-content">
-                  <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in</p>
+                  <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in.
+                    Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est.
+                    Purus gravida quis blandit turpis cursus in</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -876,7 +1151,8 @@
               <div class="faq-item">
                 <h3>Perspiciatis quod quo quos nulla quo illum ullam?</h3>
                 <div class="faq-content">
-                  <p>Enim ea facilis quaerat voluptas quidem et dolorem. Quis et consequatur non sed in suscipit sequi. Distinctio ipsam dolore et.</p>
+                  <p>Enim ea facilis quaerat voluptas quidem et dolorem. Quis et consequatur non sed in suscipit sequi.
+                    Distinctio ipsam dolore et.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -920,7 +1196,8 @@
           <div class="col-lg-5">
             <div class="info-box" data-aos="fade-up" data-aos-delay="200">
               <h3>Contact Info</h3>
-              <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+              <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.
+              </p>
 
               <div class="info-item" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box">
@@ -958,9 +1235,11 @@
           <div class="col-lg-7">
             <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
               <h3>Get In Touch</h3>
-              <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+              <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.
+              </p>
 
-              <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
+                data-aos-delay="200">
                 <div class="row gy-4">
 
                   <div class="col-md-6">
@@ -1084,15 +1363,20 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+  <script src="./Manaflow BI_files/clerk.browser.js.download" data-clerk-js-script="true" async=""
+    crossorigin="anonymous" data-clerk-publishable-key="pk_live_Y2xlcmsubWFuYWZsb3cuY29tJA"
+    data-clerk-domain="bi.new"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
